@@ -12,12 +12,12 @@ interface TabNavigationProps {
 const tabItems = [
   { id: GameTab.PRODUCERS, label: 'Forge', icon: '🏭' },
   { id: GameTab.CRAFTERS, label: 'Assembly', icon: '🛠️' },
+  { id: GameTab.INVENTORY, label: 'Vault', icon: '📦' },
+  { id: GameTab.RESEARCH, label: 'Labs', icon: '🔬' },
   { id: GameTab.FUSION, label: 'Fusion', icon: '⚛️' },
   { id: GameTab.QUESTS, label: 'Missions', icon: '📜' },
-  { id: GameTab.INVENTORY, label: 'Vault', icon: '📦' },
   { id: GameTab.MARKET, label: 'Void', icon: '🌌' },
   { id: GameTab.SPECIALIZATION, label: 'Paths', icon: '✨' },
-  { id: GameTab.RESEARCH, label: 'Labs', icon: '🔬' },
   { id: GameTab.ACHIEVEMENTS, label: 'Trophies', icon: '🏆' },
 ];
 
