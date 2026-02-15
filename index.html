@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>QuantumForge Idle</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Ensure full-screen experience and remove common mobile browser UI elements */
+      html, body, #root {
+        height: 100%;
+        margin: 0;
+        overflow: hidden; /* Prevent scrolling */
+        overscroll-behavior: none; /* Disable pull-to-refresh */
+      }
+      body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      }
+      /* Optional: Hide scrollbars globally for a cleaner look */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+
+      /* Custom scrollbar hiding */
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Navigation mask fade for smooth edges */
+      .nav-mask {
+        mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+      }
+
+      /* Custom animations */
+      @keyframes nav-glow {
+        0%, 100% { opacity: 0.5; box-shadow: 0 0 10px rgba(52, 211, 153, 0.2); }
+        50% { opacity: 1; box-shadow: 0 0 20px rgba(52, 211, 153, 0.6); }
+      }
+
+      .active-glow {
+        animation: nav-glow 2s infinite ease-in-out;
+      }
+
+      @keyframes fade-in-up {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .animate-fade-in-up {
+        animation: fade-in-up 0.3s ease-out forwards;
+      }
+
+      @keyframes level-up-flash {
+        0% { filter: brightness(1); transform: scale(1); }
+        30% { filter: brightness(2.5); transform: scale(1.25); }
+        100% { filter: brightness(1); transform: scale(1); }
+      }
+
+      .animate-level-up {
+        animation: level-up-flash 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+      }
+
+      @keyframes shimmer {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(100%); }
+      }
+
+      @keyframes slide-in-right {
+        from { opacity: 0; transform: translateX(20px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+
+      .stagger-1 { animation: fade-in-up 0.4s ease-out 0.1s both; }
+      .stagger-2 { animation: fade-in-up 0.4s ease-out 0.15s both; }
+      .stagger-3 { animation: fade-in-up 0.4s ease-out 0.2s both; }
+      .stagger-4 { animation: fade-in-up 0.4s ease-out 0.25s both; }
+      .stagger-5 { animation: fade-in-up 0.4s ease-out 0.3s both; }
+
+      .animate-pulse-slow {
+        animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      @keyframes pulse-ring {
+        0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+        70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(52, 211, 153, 0); }
+        100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+      }
+
+      .ring-animate {
+        animation: pulse-ring 2s infinite;
+      }
+
+      @keyframes pulse-ring-sm {
+        0% { transform: scale(0.8); opacity: 0.8; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.7); }
+        50% { transform: scale(1.2); opacity: 0; box-shadow: 0 0 0 5px rgba(52, 211, 153, 0); }
+        100% { transform: scale(0.8); opacity: 0.8; box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+      }
+
+      @keyframes pulse-micro {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.1); opacity: 0.8; }
+      }
+      .animate-pulse-micro {
+        animation: pulse-micro 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/quantumforge-idle/assets/index-CYOIriOp.js"></script>
+</head>
+<body class="bg-gray-950 text-gray-100">
+    <div id="root"></div>
+</body>
+</html>
